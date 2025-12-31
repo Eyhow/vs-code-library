@@ -1,0 +1,21 @@
+.module-page {
+  padding: var(--space-lg);
+}
+
+.module-header {
+  margin-bottom: var(--space-lg);
+}
+
+.module-header h1 {
+  margin-bottom: var(--space-xs);
+}
+
+.module-header p {
+  margin-bottom: var(--space-sm);
+}
+
+.module-content pre {
+  font-family: var(--font-code);
+  font-size: 13px;
+  line-height: 1.5;
+}

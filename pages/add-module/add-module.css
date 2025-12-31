@@ -1,0 +1,157 @@
+.page-add-module {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+  min-height: calc(100vh - 40px);
+  box-sizing: border-box;
+}
+
+.module-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-height: calc(100vh - 160px);
+  overflow: auto;
+  padding-bottom: var(--space-lg);
+}
+
+.form-grid--meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.form-section {
+  padding: var(--space-md);
+}
+
+.form-section--code h3,
+.code-grid .card h3 {
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.code-grid .card h3::after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 2px;
+  margin: 6px auto 0;
+  background: rgba(255, 255, 255, 0.143);
+  opacity: 0.6;
+}
+
+
+.form-grid--meta textarea {
+  grid-column: span 4;
+  margin-top: var(--space-xs);
+  height: 56px;
+  resize: vertical;
+}
+
+.code-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.code-grid > .card:first-child {
+  grid-column: span 2; /* HTML full width */
+}
+
+textarea {
+  width: 100%;
+  min-height: 96px;
+  background: rgba(0, 0, 0, 0.25); /* darker than card */
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm);
+  box-sizing: border-box;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-sm) 0;
+}
+
+/* Inputs should match textarea appearance */
+.module-form input[type="text"],
+.module-form input[type="email"],
+.module-form input[type="url"],
+.module-form input[type="search"] {
+  background: rgba(0, 0, 0, 0.22);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-sm);
+  padding: 6px 8px;
+  height: 32px;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+/* Primary button styling: centered and optionally full width */
+.form-actions {
+  padding-top: var(--space-md);
+}
+
+.form-actions > .primary,
+.form-actions > button.primary {
+  width: 100%;
+  max-width: none;
+
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(124, 108, 255, 0.45);
+
+  background: rgba(124, 108, 255, 0.14);
+  color: var(--text-primary);
+
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+
+
+.form-actions > .primary:hover {
+  background: rgba(124, 108, 255, 0.2);
+}
+
+.form-actions > .primary:active {
+  transform: translateY(1px);
+}
+
+
+.form-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.form-layout > .card,
+.form-layout > .form-section {
+  width: 100%;
+}
+
+
+
+/* Ensure code grid and meta grid are responsive on small screens */
+@media (max-width: 800px) {
+  .form-grid--meta { grid-template-columns: 1fr; }
+  .code-grid { grid-template-columns: 1fr; }
+}
+
+

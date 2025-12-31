@@ -1,0 +1,22 @@
+.tabs {
+  display: flex;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.tabs button {
+  background: transparent;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.tabs button.active {
+  color: var(--text-primary);
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 0 1px rgba(124, 108, 255, 0.4);
+}

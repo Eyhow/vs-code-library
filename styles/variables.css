@@ -1,0 +1,37 @@
+:root {
+  /* ---- Colors ---- */
+  --bg-main: #0b0f1a;
+  --bg-surface: #11162a;
+  --bg-card: rgba(255, 255, 255, 0.04);
+
+  --border-soft: rgba(255, 255, 255, 0.08);
+
+  --text-primary: #f5f7ff;
+  --text-secondary: #a8b0d8;
+  --text-muted: #6c7399;
+
+  --accent-purple: #7c6cff;
+  --accent-cyan: #2de2e6;
+  --accent-magenta: #ff5ea8;
+
+  /* ---- Shadows ---- */
+  --shadow-soft:
+    0 8px 24px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+  /* ---- Radius ---- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* ---- Spacing ---- */
+  --space-xs: 6px;
+  --space-sm: 10px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* ---- Fonts ---- */
+  --font-ui: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-code: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}

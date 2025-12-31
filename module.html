@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Module</title>
+
+  <link rel="stylesheet" href="./styles/reset.css" />
+  <link rel="stylesheet" href="./styles/variables.css" />
+  <link rel="stylesheet" href="./styles/base.css" />
+  <link rel="stylesheet" href="./pages/module/module.css" />
+  <link rel="stylesheet" href="./features/tabs/tabs.css" />
+  <link rel="stylesheet" href="./features/code-viewer/code-viewer.css" />
+  <link rel="stylesheet" href="./features/header/header.css" />
+</head>
+<body>
+
+  <div data-header></div>
+
+  <main class="module-page">
+    <header class="module-header">
+      <h1 id="module-title"></h1>
+      <p id="module-description"></p>
+      <div id="module-meta"></div>
+    </header>
+
+    <section class="module-content">
+      <div data-tabs>
+        <nav class="tabs">
+          <button data-tab="html">HTML</button>
+          <button data-tab="css">CSS</button>
+          <button data-tab="js">JS</button>
+        </nav>
+
+        <div class="tab-panels">
+
+        <pre class="card code-block" data-panel="html">
+            <button class="copy-btn" data-copy="code-html">Copy</button>
+            <code id="code-html"></code>
+        </pre>
+
+        <pre class="card code-block" data-panel="css">
+            <button class="copy-btn" data-copy="code-css">Copy</button>
+            <code id="code-css"></code>
+        </pre>
+
+        <pre class="card code-block" data-panel="js">
+            <button class="copy-btn" data-copy="code-js">Copy</button>
+            <code id="code-js"></code>
+        </pre>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-footer></div>
+
+  <script src="./core/bootstrap.js" type="module"></script>
+  <script src="./pages/module/module.js" type="module"></script>
+</body>
+</html>

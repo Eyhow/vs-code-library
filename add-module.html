@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Add Module – VS Code Library</title>
+
+  <!-- Core styles -->
+  <link rel="stylesheet" href="./styles/reset.css" />
+  <link rel="stylesheet" href="./styles/variables.css" />
+  <link rel="stylesheet" href="./styles/base.css" />
+
+  <!-- Feature styles -->
+  <link rel="stylesheet" href="./features/header/header.css" />
+
+  <!-- Page styles -->
+  <link rel="stylesheet" href="./pages/add-module/add-module.css" />
+</head>
+
+<body class="page-add-module">
+
+  <!-- Header -->
+  <div data-header></div>
+
+  <main class="page-add-module">
+    <h1>Add Module</h1>
+
+    <form class="module-form" id="module-form">
+
+      <!-- ===================== -->
+      <!-- Metadata -->
+      <!-- ===================== -->
+      <section class="form-section card">
+        <h2>Metadata</h2>
+
+        <div class="form-grid form-grid--meta">
+          <input
+            type="text"
+            name="id"
+            placeholder="module-id (kebab-case)"
+            required
+          />
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Module name"
+            required
+          />
+
+          <input
+            type="text"
+            name="category"
+            placeholder="Category"
+            required
+          />
+
+          <input
+            type="text"
+            name="tags"
+            placeholder="Tags (comma separated)"
+          />
+
+          <textarea
+            name="description"
+            placeholder="Short description"
+            rows="2"
+          ></textarea>
+        </div>
+      </section>
+
+      <!-- ===================== -->
+      <!-- Code editors -->
+      <!-- ===================== -->
+      <section class="form-section form-section--code">
+        <div class="code-grid">
+
+          <!-- HTML -->
+          <div class="card">
+            <h3>HTML</h3>
+            <textarea
+              name="html"
+              placeholder="<div>…</div>"
+              required
+            ></textarea>
+          </div>
+
+          <!-- CSS -->
+          <div class="card">
+            <h3>CSS</h3>
+            <textarea
+              name="css"
+              placeholder=".component { }"
+            ></textarea>
+          </div>
+
+          <!-- JS -->
+          <div class="card">
+            <h3>JS</h3>
+            <textarea
+              name="js"
+              placeholder="export function init() { }"
+            ></textarea>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===================== -->
+      <!-- Actions -->
+      <!-- ===================== -->
+      <section class="form-actions">
+        <button type="submit" class="primary">
+          Generate module
+        </button>
+      </section>
+
+    </form>
+  </main>
+
+  <!-- Core bootstrap -->
+  <script type="module" src="./core/bootstrap.js"></script>
+
+  <!-- Page logic -->
+  <script type="module" src="./pages/add-module/add-module.js"></script>
+
+</body>
+</html>
